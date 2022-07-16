@@ -4,7 +4,6 @@ const input = document.querySelector('#input')
 const form = document.querySelector('#form')
 // Assim que a página é carregada faz uma requisição ao back-end
 const show = () => {
-    console.log("chamou")
     ul.innerHTML = ""
     // O conteúdo da requisição é transformado de JSON para object e em seguida mapeado os dados passando chamando a função de exibir no html
     fetch(`http://localhost:3000/link`)
@@ -14,11 +13,6 @@ const show = () => {
 show()
 
 
-/*,{
-        // method: 'GET',
-        // headers: 'Content-Type: application/json'
-    }
-*/
 
 // Função que tem como argumento um object desestruturado com os chaves name e url, para criação do elemento da lista
 function showElement({ name, url, _id }) {
